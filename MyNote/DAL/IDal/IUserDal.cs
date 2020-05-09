@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 using DAL.Dal;
 using Entity;
 using MefBase.IBaseEF;
+using Models.Entity;
 
 namespace DAL.IDal
 {
+    //public interface IUserDal:IRepository<UserInfoSet>
+    //{
+    //    UserInfoSet UserLogin(string userName, string userPwd);
 
 
-    public interface IUserDal:IRepository<UserInfoSet>
-    {
-        UserInfoSet UserLogin(string userName, string userPwd);
-
-
-    }
+    //}
 }

@@ -1,0 +1,338 @@
+﻿
+body {
+    background: #fff;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login-box {
+    margin: 30px auto 0;
+    max-width: 420px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-control,
+input[type="text"],
+input[type="password"] {
+    display: block;
+    padding: 5px 12px;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: 1px solid #cbd5dd;
+    border-radius: 5px;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    color: #767676;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.42857;
+    -o-transition: border-color ease-in-out 0.55s, box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out 0.55s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out 0.55s, box-shadow ease-in-out .15s;
+}
+
+    .form-control:active,
+    .form-control:focus {
+        border-color: #248aaf;
+    }
+
+.input-validation-error {
+    border-color: #c00;
+}
+
+.form-control:active {
+    outline: none;
+}
+
+.btn-icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e4e4e4;
+    border: 1px solid rgba(187, 187, 187, .4);
+    border-radius: 5px;
+    background: transparent;
+    color: #bbb;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    -webkit-transition: color 1.2s ease,border 1.2s ease;
+    transition: color 1.2s ease,border 1.2s ease;
+}
+
+.form-group input:active ~ .btn-icon,
+.form-group input:focus ~ .btn-icon {
+    color: #09a3e3;
+    border: 1px solid rgba(187, 187, 187, .6);
+}
+
+.validationcode {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.field-validation-error {
+    padding-left: 35px;
+    line-height: 20px;
+}
+
+    .field-validation-error span {
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+    }
+
+.loginConBox .controls .field-required-remind {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+}
+
+/*placeholder 样式*/
+
+[placeholder] {
+}
+
+::-moz-placeholder {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+:-ms-input-placeholder {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/*锁定与解锁*/
+
+.user-lock-box {
+    margin: 100px auto 0;
+    max-width: 260px;
+}
+
+.avatar {
+    position: relative;
+    margin: 0 auto 30px;
+    width: 180px;
+    height: 180px;
+    border: 3px solid #eee;
+    border: 3px solid rgba(204, 204, 204, .1);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .5);
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 7px rgba(0, 0, 0, .1);
+    -o-transition: box-shadow ease-in-out 1.25s;
+    -webkit-transition: box-shadow ease-in-out 1.25s;
+    transition: box-shadow ease-in-out 1.25s;
+}
+
+    .avatar img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .avatar:hover {
+        box-shadow: 0 0 10px rgba(36, 138, 175, .975);
+        -o-transition: box-shadow ease-in-out 1.25s;
+        -webkit-transition: box-shadow ease-in-out 1.25s;
+        transition: box-shadow ease-in-out 1.25s;
+    }
+
+.status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border-color: #181818;
+    background-color: rgba(0, 0, 0, .2);
+    text-align: center;
+    cursor: pointer;
+}
+
+    .status i {
+        color: #e8e8e8;
+        color: rgba(255, 255, 255, .9);
+        font-size: 40px;
+        line-height: 174px;
+        display: none;
+    }
+
+    .status .fa-unlock,
+    .status:hover .fa-lock {
+        display: none;
+    }
+
+    .status:hover .fa-unlock {
+        display: block;
+    }
+
+.tips {
+    color: #999;
+    text-align: center;
+}
+
+.user-lock-box.active .avatar {
+    box-shadow: 0 0 10px rgba(36, 138, 175, .575);
+}
+
+.user-lock-box.active .status,
+.user-lock-box.active .tips,
+.user-lock-box .operate {
+    display: none;
+}
+
+.user-lock-box.active .operate {
+    display: block;
+}
+
+.login-part-class {
+    display: none;
+}
+
+.browser-part-class {
+    display: none;
+}
+
+.browser-center {
+    width: 75%;
+}
+
+.browser-center-div {
+    float: left;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(233, 233, 233);
+    width: 200px;
+}
+
+    .browser-center-div img {
+        width: 124px;
+        height: 124px;
+    }
+
+.browser-center-divsecond {
+    float: left;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(233, 233, 233);
+    width: 350px;
+}
+
+.browser-center-divsecond-div {
+    float: left;
+}
+
+.browser-center-divsecond img {
+    width: 124px;
+    height: 124px;
+}
+
+.browser-bottom {
+    margin-top: 35px;
+}
+
+#browser-bottom-button {
+    margin-top: 15px;
+    font-weight: bold;
+    background-color: rgb(219, 81, 74);
+    color: white;
+}
+
+
+
+body, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+.top, .loginbg, .loginMain, .footer {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.top {
+    width: 1200px;
+    height: 90px;
+    padding-top: 5px;
+}
+
+.loginbg {
+    width: 100%;
+    min-width: 1200px;
+    height: 600px;
+    background-color: #ebf0f1;
+    background-position: center center;
+}
+
+.loginMain {
+    width: 1200px;
+    height: 600px;
+}
+
+.loginBox {
+    width: 350px;
+    height: 350px;
+    background-color: #fff;
+    float: right;
+    overflow: hidden;
+    margin: 120px 60px 0 0;
+    padding: 0 20px;
+}
+
+.footer {
+    width: 1200px;
+    height: auto;
+    min-height: 50px;
+    margin-top: 40px;
+    color: #999;
+    font-size: 12px;
+}
+
+    .footer span {
+        float: right;
+    }
+
+    .footer i {
+        margin-left: 10px;
+        font-style: normal;
+    }
+
+.loginbtn {
+    background-color: #f5a439;
+    color: #fff;
+    margin: 25px 0 35px 0;
+}
+
+.forgetpw {
+    float: right;
+    color: #666666;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wecomle {
+    font-size: 18px;
+    margin-bottom: 15px;
+}

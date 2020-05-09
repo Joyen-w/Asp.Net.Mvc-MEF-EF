@@ -33,6 +33,10 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
@@ -46,6 +50,10 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,6 +64,13 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,14 +82,103 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotations\Align.cs" />
+    <Compile Include="Annotations\BaseAttribute.cs" />
+    <Compile Include="Annotations\ComplexAttribute.cs" />
+    <Compile Include="Annotations\ConditionalOperator.cs" />
+    <Compile Include="Annotations\EnumAttribute.cs" />
+    <Compile Include="Annotations\ExtendContentFieldAttribute.cs" />
+    <Compile Include="Annotations\GridColumnAttribute.cs" />
+    <Compile Include="Annotations\GridFilterPropertyType.cs" />
+    <Compile Include="Annotations\IDataSource.cs" />
+    <Compile Include="Annotations\IdAttribute.cs" />
+    <Compile Include="Annotations\ImeModeValue.cs" />
+    <Compile Include="Annotations\IntegerAttribute.cs" />
+    <Compile Include="Annotations\ModelClientValidationDangerousRule.cs" />
+    <Compile Include="Annotations\NumericAttribute.cs" />
+    <Compile Include="Annotations\PredefinedFormatter.cs" />
+    <Compile Include="Annotations\RemoteExistsAttribute.cs" />
+    <Compile Include="Annotations\SelectUIType.cs" />
+    <Compile Include="Annotations\StringAttribute.cs" />
+    <Compile Include="Annotations\SuperordinateIdAttribute.cs" />
+    <Compile Include="Annotations\TextAttribute.cs" />
+    <Compile Include="Annotations\UnmodifiableAttribute.cs" />
+    <Compile Include="Config\AuthenticationType.cs" />
+    <Compile Include="Config\DatumMark.cs" />
+    <Compile Include="Config\GlobalConfigProvider.cs" />
+    <Compile Include="Config\GlobalUploadConfig.cs" />
+    <Compile Include="Config\IConfigProvider.cs" />
+    <Compile Include="Config\IExceptionConfig.cs" />
+    <Compile Include="Config\IGlobalUploadConfig.cs" />
+    <Compile Include="Config\IMailConfig.cs" />
+    <Compile Include="Config\ISecurityConfig.cs" />
+    <Compile Include="Config\ISiteConfig.cs" />
+    <Compile Include="Config\IUserConfig.cs" />
+    <Compile Include="Config\IWatermarkConfig.cs" />
+    <Compile Include="Config\SecurityConfig.cs" />
+    <Compile Include="Config\WatermarkType.cs" />
+    <Compile Include="Dal\DescriptionInitializer.cs" />
+    <Compile Include="Dal\GenericRepository.cs" />
+    <Compile Include="Dal\ModelTypeData.cs" />
+    <Compile Include="Dal\PredicateBuilder.cs" />
+    <Compile Include="Dal\PyDal.cs" />
+    <Compile Include="Dal\Sort.cs" />
     <Compile Include="Dal\UserDal.cs" />
+    <Compile Include="DBContext\BaseDbContext.cs" />
     <Compile Include="DBContext\Base.cs" />
+    <Compile Include="Dal\BaseLogic.cs" />
+    <Compile Include="DBContext\BaseJson.cs" />
+    <Compile Include="DBContext\DbWecareContext.cs" />
     <Compile Include="DBContext\DbContextBase.cs" />
+    <Compile Include="DBContext\ExtendFieldAttributeConvention.cs" />
+    <Compile Include="DBContext\IdAttributeConvention.cs" />
+    <Compile Include="DBContext\InitializerComposite.cs" />
+    <Compile Include="DBContext\IPagedList.cs" />
     <Compile Include="DBContext\RepositoryContext.cs" />
+    <Compile Include="DBContext\StringAttributeMaxLengthConvention.cs" />
+    <Compile Include="IDal\IRepository.cs" />
+    <Compile Include="IDal\ILogic.cs" />
     <Compile Include="IDal\INoteDal.cs" />
+    <Compile Include="IDal\IPyDal.cs" />
     <Compile Include="IDal\IUserDal.cs" />
     <Compile Include="Dal\NoteDal.cs" />
+    <Compile Include="UploadConfig\IUploadConfig.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Mvc\PowerRouteData.cs" />
+    <Compile Include="Mvc\SelectListExtensions.cs" />
+    <Compile Include="Mvc\UrlHelperExtension.cs" />
+    <Compile Include="Power\EngineHelper.cs" />
+    <Compile Include="Power\PowerUrlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resources.cs" />
+    <Compile Include="Search\ConstraintRule.cs" />
+    <Compile Include="Search\ISearchEngine.cs" />
+    <Compile Include="Search\ISearchParameters.cs" />
+    <Compile Include="Search\PageSearchParameters.cs" />
+    <Compile Include="Search\QueryStringRuleParser.cs" />
+    <Compile Include="Search\SearchConstraint.cs" />
+    <Compile Include="Search\SearchConstraintBinder.cs" />
+    <Compile Include="Search\SearchEngine.cs" />
+    <Compile Include="Search\SearchParametersModelBinder.cs" />
+    <Compile Include="Search\SearchSortConstraintBinder.cs" />
+    <Compile Include="Search\Seeker.cs" />
+    <Compile Include="Search\Seeker1.cs" />
+    <Compile Include="Utilities\Check.cs" />
+    <Compile Include="Utilities\DataSourceHelper.cs" />
+    <Compile Include="Utilities\EnumerableExtensions.cs" />
+    <Compile Include="Utilities\ModelHelper.cs" />
+    <Compile Include="Utilities\PathHelper.cs" />
+    <Compile Include="Utilities\TypeExtensions.cs" />
+    <Compile Include="WebGrid\IAutomaticMatchingFilterConstraint.cs" />
+    <Compile Include="WebGrid\ICustomFilterConstraint.cs" />
+    <Compile Include="WebGrid\IFilterConstraintProvider.cs" />
+    <Compile Include="Web\CachedModelTypeData.cs" />
+    <Compile Include="Web\IOrderable.cs" />
+    <Compile Include="Web\ModelTypeDataProvider.cs" />
+    <Compile Include="Web\NestedTree.cs" />
+    <Compile Include="Web\PowerCache.cs" />
+    <Compile Include="Web\TreeParentNode.cs" />
+    <Compile Include="Web\TreeSetNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

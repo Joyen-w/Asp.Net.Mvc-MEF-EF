@@ -125,7 +125,8 @@ namespace MefBase.BaseEF
         /// <returns> 操作影响的行数 </returns>
         public virtual int Delete(Expression<Func<TEntity, bool>> filterExpression)
         {
-            return Context.Set<TEntity>().Delete(filterExpression);
+            //return Context.Set<TEntity>().Delete(filterExpression);
+            return 0;
         }
 
         /// <summary>

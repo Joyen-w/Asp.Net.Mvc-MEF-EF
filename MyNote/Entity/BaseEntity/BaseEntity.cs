@@ -9,5 +9,6 @@ namespace Entity.BaseEntity
     [Serializable]
     public class BaseEntity
     {
+
     }
 }

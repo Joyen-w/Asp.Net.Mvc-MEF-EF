@@ -24,5 +24,17 @@ namespace UI.Controllers
 
             return View();
         }
+
+        /// <summary>
+        /// ViewPage1
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult MyView()
+        {
+          
+            return View();
+        }
+
+
     }
 }

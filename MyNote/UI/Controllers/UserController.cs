@@ -11,13 +11,18 @@ namespace UI.Controllers
 {
     [Export]
     public class UserController : BaseController
-    {     
+    {
+        ///// <summary>
+        ///// pyDal
+        ///// </summary>
+        //[Import]
+        //public IPyDal PyDal { get; set; }
 
-        /// <summary>
-        /// UserDal
-        /// </summary>
-        [Import]
-        public IUserDal UserDal { get; set; }
+        ///// <summary>
+        ///// UserDal
+        ///// </summary>
+        //[Import]
+        //public IUserDal UserDal { get; set; }
 
         /// <summary>
         /// 登录页面Page 
@@ -36,11 +41,13 @@ namespace UI.Controllers
         /// <returns></returns>
         public ActionResult Login(string userName, string userPwd)
         {
-            var res = UserDal.UserLogin(userName, userPwd);
-            if (res != null)
-            {
+            //var res = UserDal.UserLogin(userName, userPwd);
+            //var py = PyDal.GetPY();
+
+            //if (res != null && py != null)
+            //{
                 Response.Redirect("/MyNote/MyNotePage");
-            }
+           // }
 
             return Content("<script>alert('帐号密码错误。');location.href='/User/LoginPage';</script>");
         }

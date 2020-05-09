@@ -4,3 +4,8 @@ C:\Users\xxxue\source\repos\MyNote\Entity\obj\Debug\Entity.csprojResolveAssembly
 C:\Users\xxxue\source\repos\MyNote\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\xxxue\source\repos\MyNote\Entity\obj\Debug\Entity.dll
 C:\Users\xxxue\source\repos\MyNote\Entity\obj\Debug\Entity.pdb
+D:\wecare\project\aspMvc\MyNote\Entity\bin\Debug\Entity.dll
+D:\wecare\project\aspMvc\MyNote\Entity\bin\Debug\Entity.pdb
+D:\wecare\project\aspMvc\MyNote\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\wecare\project\aspMvc\MyNote\Entity\obj\Debug\Entity.dll
+D:\wecare\project\aspMvc\MyNote\Entity\obj\Debug\Entity.pdb

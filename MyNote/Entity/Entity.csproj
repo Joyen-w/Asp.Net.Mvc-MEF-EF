@@ -45,6 +45,7 @@
     <Compile Include="BaseEntity\BaseEntity.cs" />
     <Compile Include="NoteContentSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PY.cs" />
     <Compile Include="UserInfoSet.cs" />
   </ItemGroup>
   <ItemGroup />

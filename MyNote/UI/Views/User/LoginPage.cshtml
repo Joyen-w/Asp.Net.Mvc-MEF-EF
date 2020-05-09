@@ -1,25 +1,54 @@
-﻿
+﻿@using Models.Entity
+@model Models.Entity.UserInfoSet
+
 @{
     Layout = null;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>LoginPage</title>
-</head>
-<body>
-    <div>
-        <form action="/User/Login" method="post">
-            <input type="text" name="UserName" />
-            <input type="text" name="UserPwd" />
-            <button type="submit">登录</button>
-
-        </form>
+@section header
+{
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/login.css" rel="stylesheet" />
+}
 
 
+<div class="loginbg" style="background-image: url(/Content/img/SDHPReferralSystem.png);">
+    <div class="loginMain">
+        <div class="loginBox">
+            <div id="login-part">
+                <div class="animated fadeInDown container-response">
+                    <div class="login-box">
+                        <div class="hd"></div>
+                        <div class="bd">
+                            <div class="wecomle">欢迎登录</div>
+                            <form action="/User/Login" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-bgcolor" placeholder="登录账号" name="userName" id="userName" />
+                                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                    <div class="btn-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control input-bgcolor" placeholder="登录密码" name="userPwd" id="userPwd" />
+                                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                    <div class="btn-icon">
+                                        <i class="fa fa-key"></i>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4"></div>
+                                    <div class="col-xs-4">
+                                        <button type="submit" class="btn btn-primary btn-block btn-flat" style="margin-top:20px;">登录</button>
+                                    </div>
+                                    <div class="col-xs-4"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>

@@ -1,4 +1,5 @@
 ﻿using Entity;
+using Models.Entity;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
@@ -8,7 +9,7 @@ namespace DAL.DBContext
     {
         #region /// 构造函数
 
-        public DbContextBase() : base("MyNoteDBEntities")
+        public DbContextBase() : base("myNote")
         {
             //修改模型后~运行~会创建新的数据库
             Database.SetInitializer<DbContextBase>(new DropCreateDatabaseIfModelChanges<DbContextBase>());

@@ -29,7 +29,7 @@ namespace DAL.DBContext
         /// </summary>
         public DbContext DbContext
         {
-            get { return _dbContext ?? (_dbContext = new DbContextBase("MyNoteDBEntities")); }
+            get { return _dbContext ?? (_dbContext = new DbContextBase()); }
             set { _dbContext = value; }
         }
     }

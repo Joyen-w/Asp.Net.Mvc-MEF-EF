@@ -7,11 +7,11 @@ using DAL.IDal;
 
 namespace DAL.Dal
 {
-    [Export(typeof(INoteDal))]
-    public partial class NoteDal: Base<Entity.NoteContentSet>, INoteDal
-    {
+    //[Export(typeof(INoteDal))]
+    //public partial class NoteDal: Base<Entity.NoteContentSet>, INoteDal
+    //{
        
 
 
-    }
+    //}
 }
